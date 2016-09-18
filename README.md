@@ -1,6 +1,6 @@
 # Starvy-Ramsey
 Backend Ruby on rails server for Starvy app
-
+![gordon-ramsay-net-worth](https://cloud.githubusercontent.com/assets/5790854/18618244/82e7fc00-7db0-11e6-8366-3184ea619bde.jpg)
 ## Setup
 To use ruby you must use the Ruby Virtual Environment (RVM)
 ```
