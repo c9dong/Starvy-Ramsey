@@ -21,7 +21,7 @@ class YelpController < ApplicationController
 
   def business
     if (params[:business])
-      response = @client.business(param[:business], english_local)
+      response = @client.business(params[:business], english_local)
       render :json => response
     end
   end
