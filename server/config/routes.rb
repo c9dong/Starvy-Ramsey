@@ -1,10 +1,24 @@
 Rails.application.routes.draw do
+
   resources :users
-  root 'application#welcome'
+  resources :home, only: [:show]
+
+  root 'home#show'
+
+  get 'auth/:provider/callback' => 'session#create'
+  get 'auth/failure' => redirect('/')
+  get 'signout' => 'session#destroy'
+
+  # ==============================
+  # Yelp
+  # ==============================
+  get 'yelp/search' => 'yelp#search'
+  # get 'yelp/search_next' => 'yelp#search_next'
+  get 'yelp/business' => 'yelp#business'
 
   # sessions
-  post 'login' => 'session#create'
-  post 'logout' => 'session#destroy'
+  # post 'login' => 'session#create'
+  # post 'logout' => 'session#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
