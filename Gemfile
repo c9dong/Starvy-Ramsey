@@ -5,12 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.7.1'
 
 # Database
-group :development, :test do
-  gem 'sqlite3'
-end
-group :production do
-  gem 'pg'
-end
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
